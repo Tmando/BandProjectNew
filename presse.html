@@ -1,143 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+	<meta charset="utf-8">
+    <title></title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style>
-#mainNavigation{
-  color:#09C;
-
-}
-</style>
-<script src="link.js">
-</script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body onload="navBar()">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-    <ul id="mainNavigation" class="nav navbar-nav">
+<body onload="addNewsLetterText();addSongTitle();">
+	<script src="SiteBar.js"></script>
+    <!-- Main Container -->
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        </div>
+      	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      		<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-    </ul>
-  </div>
-</div>
-  </div>
-</nav>
-
-<div class="container pressContainer">
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
       <p>Promotionmappe & Pressetext</p>
       <p>auf Anfrage: <a href="kontakt@floyddivision.at">kontakt@floyddivision.at</a></p>
     </div>
-  </div>
-<div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+  
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <h1>Pressefotos</h1>
 
-      <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <img class="img-responsive" src="img/FloydDivision_Pressefoto_1_k.jpg">
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <img class="img-responsive" src="img/FloydDivision_Pressefoto_2_2_k.jpg">
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <img class="img-responsive" src="img/FloydDivision_Pressefoto_3_k.jpg">
+          <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_3_RGB.jpg">download High Res</a></p>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <img class="img-responsive" src="img/FloydDivision_Pressefoto_4_k.jpg">
+          <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_4_RGB.jpg">download High Res</a></p>
         </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-responsive" src="img/FloydDivision_Pressefoto_1_k.jpg">
+        <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_1_RGB.jpg">download High Res</a></p>
       </div>
-    </div>
-    <div class="col-lg-2">
-            <h4 style="color: white; text-align: center">Floyd Division Newsletter</h4>
-                <p  style="color: white; text-align: center">Sende ein Mail mit e-mail Adresse an:</p>
-                <p  style="color: white; text-align: center"><a href="newsletter@floyddivision.at">newsletter@floyddivision.at</a></p>
-                <br>
-                <br>
-                <div>            
-                    <h4 style="color: red; text-align: center">ANDREAS PUTZ</h4>
-                    <p  style="color: white; text-align: center">Audio Engineering </p>
-                    <p style="color: #09c; text-align: center"><a href="www.andreas-putz.com">www.andreas-putz.com</a></p>
-                </div>
-                <br>
-                <br>
-                <p style="font-size:1.5em; font-weight: 2.0em; color: white; text-align: center">Floyd Division</p>
-                <p style="color: #09C; text-align: center;">Programmauszug</p>
-                <br>
-                <p style="color: white; text-align: center;">speak to me
-                    <br> breathe
-                    <br> time
-                    <br> great gig in the sky
-                    <br> money
-                    <br> us and them
-                    <br> any colour you like
-                    <br> brain damage
-                    <br> eclipsed
-                    <br> in the flesh
-                    <br> another brick in the wall
-                    <br> mother
-                    <br> comfortably numb
-                    <br> hey you
-                    <br> run like hell
-                    <br> shine on you crazy d.
-                    <br> wish you were here
-                    <br> set the controls for the heart of the sun
-                    <br> one of these days
-                    <br> echoes
-                    <br> dogs
-                    <br> sheep
-                    <br> learning to fly
-                    <br> coming back to life
-                    <br> sorrow
-                    <br> high hopes
-                    <br> take it back
-                    <br> keep talking
-                    <br> on the turning away
-                    <br> poles apart
-                    <br> great day for freedom
-                    <br> marooned
-                    <br> what do you want...
-                    <br> red sky at night</p>
-            </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-responsive" src="img/FloydDivision_Pressefoto_2_2_k.jpg">
+        <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_2_2.JPG">download High Res</a></p>
+      </div>
+      </div>
+
+
+
+	
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <h1>Pressestimmen</h1>
-    </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
-    <div class="col-lg-6">
+    
+	<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <p>
       .....2009 gegründet, gilt die Wiener Truppe als eine der arriviertesten Tribute-Bands Euopas. "Eine Reise durch endlose Klanglandschaften von Pink Floyd, ein Sound, der näher am Original nicht sein könnte", jubelt die Passauer Neue Presse. .......
       </p>
       <p>Quelle:<a href="http://www.floyddivision.at/Files/2017_SimmCity.jpg">Österreich</a></p>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
       <p>
       ....Coverband lässt Neuberinhaus beben
       300 Fans haben sich in Reichenbach von der unsterblichen Rockmusik der 1970er und 1980er Jahre sowie einer Licht- und Multimedia-Show verzaubern lassen. Ein Besucher: Ich war überrascht, hier soetwas zu erleben. …….
       </p>
-      <p>Quelle: Freie Presse</p>
+      <p>Quelle: <a href="http://www.floyddivision.at/Files/Freie_Presse.pdf">Freie Presse</a></p>
     </div>
-
-  </div>
-  </div>
-
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>
         ……Coverbands der Stones oder von AC/DC stehen vor einem Problem: Das einzigartige Charisma der Stars auf die Bühne zu bringen, ohne ins peinliche Kopieren zu verfallen, ist eine Herausforderung. Nicht so, würde man meinen, bei Pink Floyd: Die Ausnahmeband hat live vor allem mit groß angelegter Show und weniger mit Präsenz der Musiker gepunktet. Und sollte daher besser geeignet sein für eine Tribute-Show. Dass das nicht stimmt, zeigen viele internationale Tribute-Beispiele, die zwar perfekt Sound und Optik kopieren, aber auch den heftigsten Fan kalt lassen.
@@ -151,13 +83,9 @@
       </p>
       <p>Quelle: Lausitzer Rundschau</p>
     </div>
-
-  </div>
-  </div>
-
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
-    <div class="col-lg-6">
+    </div>
+    <div class="row">
+	<div class="col-lg-6">
       <p>
         ……Coverbands der Stones oder von AC/DC stehen vor einem Problem: Das einzigartige Charisma der Stars auf die Bühne zu bringen, ohne ins peinliche Kopieren zu verfallen, ist eine Herausforderung. Nicht so, würde man meinen, bei Pink Floyd: Die Ausnahmeband hat live vor allem mit groß angelegter Show und weniger mit Präsenz der Musiker gepunktet. Und sollte daher besser geeignet sein für eine Tribute-Show. Dass das nicht stimmt, zeigen viele internationale Tribute-Beispiele, die zwar perfekt Sound und Optik kopieren, aber auch den heftigsten Fan kalt lassen.
   In Wien aber gibt es die elfköpfige Floyd Division. Und die fügen einer musikalisch und optisch hervorragenden Umsetzung des Liveerlebnisses (runde Leinwand, Videoprojektion und mehr) noch etwas Entscheidendes bei: Spürbaren Enthusiasmus nämlich, der ihre Tribute-Shows besonders macht. Am 4. Februar in der SIMM City gibt es eine "Psychedelic Journey" durch die Geschichte Pink Floyds…….
@@ -170,12 +98,9 @@
       </p>
       <p>Quelle: Kronen Zeitung Klagenfurt</p>
     </div>
-
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
-    <div class="col-lg-6">
+    </div>
+    <div class="row">
+	<div class="col-lg-6">
       <p>
         "Es gibt Coverbands und Tributebands. Es gibt gute, sehr gute und schlechte. Pink Floyd stellen dafür ein bevorzugtes Objekt des Tributes dar. Es gibt Bands die beschränken sich dabei auf hochwertige Musik mit tollem Licht, andere machen eine bombastische Show, kaufen sich einen bekannten Sänger ein und kriegen musikalisch doch nix auf die Reihe..... Das es viel besser geht, beweisen Floyd Division aus Österreich.....Nach der "Australian Pink Floyd Show" und "Britfloyd", steht die Band qualitativ ganz weit oben in Europa"
       </p>
@@ -187,11 +112,8 @@
       </p>
       <p>Quelle: <a href="http://www.traunimbild.at/events/view/981/page:1">Traun Im Bild</a></p>
     </div>
-
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>
         "Die Pink Floyd Tribute Band Floyd Division mit Sänger Roman Bischof tourte gerade noch durch Deutschland. Die heimischen Fans.... waren jetzt im Pottschacher Kulturhaus am Zug. Veranstalter Harry Brawenec und die fast 300 Besucher fanden das Konzert unisono genial.
@@ -204,12 +126,8 @@
       </p>
       <p>Quelle: <a href="img/KriebsteinKritik.jpg">Freie Presse Sachsen</a></p>
     </div>
-
-  </div>
-  </div>
-
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>
         "Floyd Division sind ja so nah dran an Floyd, unglaublich. Es gab wirklich viele Momente, wo man glauben konnte, die Originale spielen da auf der Bühne. .... Die Stimme ist für mich auch die, die unter den Floyd-Coverbands am dichtesten am Original dran ist. Auch die beiden Damen im Hintergrund tragen nicht unwesentlich zum Floyd-Sound bei, machen dann bei "The great Gig in the Sky" ihr Meisterstück!.....Ja, und die beiden Gitarristen spielen wirklich wie Gilmour himself! Einfach nur genial!"
@@ -222,11 +140,8 @@
       </p>
       <p>Quelle: <a href="http://www.floyddivision.at/Files/BluegarageKritik2.jpg">Bezirksblatt Deutschlandsberg</a></p>
     </div>
-
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>
         "Pink Floyd hätte im Vergleich zu "Floyd Division" eine größere Bühne gebraucht, das war dann aber schon alles, was beide Bands unterscheidet. Musikalisch lieferten die Musiker einfach Pink Floyd pur ab"
@@ -239,57 +154,41 @@
       </p>
       <p>Quelle: <a href="http://www.pulse-and-spirit.com/konzerte/floyd-division-15-7-2011-traun-hauptplatz/">Pulse and Spirit</a></p>
     </div>
-
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>"Die Wiener "Floyd Division" sind eine europaweit anerkannte Tribute-Band und bemühen sich mit großem Aufwand und in größter Perfektion um originalgetreue Wiedergabe. Zeitlose Songs wie "Wish You Were Here" oder "Comfortably Numb" drehten für viele Besucher das Rad der Zeit um einige Jahrzehnte zurück und das es noch viele Floyd-Fans gibt, zeigte der sehr gut gefüllte Trauner Hauptplatz."</p>
       <p>Quelle: <a href="http://www.traunimbild.at/events/view/700">Traun Im Bild</a></p>
     </div>
+
     <div class="col-lg-6">
       <p>"Die Band schaffte es mit außergewöhnlichen handwerklichen Mitteln und der visuellen Umsetzung genau diese dichte, sphärische, emotionale Stimmung zu zelebrieren, für die das Original berühmt war. Ein Abend mit einem Genuss für sämtliche Sinne, eine Reise durch endlose Klanglandschaften von Pink Floyd, ein Sound, der näher am Original nicht sein könnte"</p>
       <p>Quelle: <a href="/img/BluegarageKritik.jpg">Pulse and Spirit</a></p>
     </div>
-
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-lg-8 col-lg-offset-2">
+    </div>
+    <div class="row">
     <div class="col-lg-6">
       <p>"Die Wiener "Floyd Division" sind eine europaweit anerkannte Tribute-Band und bemühen sich mit großem Aufwand und in größter Perfektion um originalgetreue Wiedergabe. Zeitlose Songs wie "Wish You Were Here" oder "Comfortably Numb" drehten für viele Besucher das Rad der Zeit um einige Jahrzehnte zurück und das es noch viele Floyd-Fans gibt, zeigte der sehr gut gefüllte Trauner Hauptplatz."</p>
       <p>Quelle: <a href="/img/NoenReview.jpg">NÖN</a></p>
     </div>
-
-  </div>
-  </div>
-
-</div>
-
-
-<footer style="margin-top: 50px;">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-3">
-          <div class="row">
-            <div class="col-lg-3">
-              <h4 style="color: red;">ANDREAS PUTZ</h4>
-              <p>Audio Engineering </p>
-              <p><a href="www.andreas-putz.com">www.andreas-putz.com</a></p>
-            </div>
-            <div class="col-lg-3">
-              <img src="https://lms.codefactory.wien/pluginfile.php/1/theme_customtotararesponsive/logo/1502183339/codefactory-vienna-1.png">
-            </div>
-            <div class="col-lg-3">
-              <p><a href="Impressum.html">Impressum</a></p>
-            </div>
-          </div>
         </div>
-      </div>
+      
     </div>
-  </footer>
+    </div>
 
+      	</div>
+        
+
+          	
+          
+
+        
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="sideBarText">
+
+        </div>
+
+      </div> <!-- End Main Row -->
+    </div> <!-- End Main Container -->
 
 </body>
 </html>
