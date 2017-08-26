@@ -70,7 +70,8 @@
   </style>
 </head>
 
-<body onload="createSlideArray();addNewsLetterText();addSongTitle();">
+<body onload="getYears();createSlideArray();addNewsLetterText();addSongTitle();getEvents();">
+  <script src="eventCalendar.js"></script>
   <script src="slideshow.js"></script>
   <script src="SiteBar.js"></script>
   <!-- Fixed navbar -->
@@ -138,6 +139,17 @@
         </ul>
         <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffloyddivision%2F&tabs=events&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=1526442847402821" width="340"
           height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-xl-12 col-sm-12 col-xs-12 col-xl-12">
+              <h1>Past Events</h1>
+              <select id="yearSelector" onchange="getEvents()">
+
+              </select>
+
+            </div>
+          </div>
+          <div class="row" id="events">
+          </div>
 
 
       </div>
