@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="jquery.bxslider.css" rel="stylesheet" />
+		<style>
+    .bandImg {
+      margin-top: 10%;
+      color: black;
+    }
+
+    .lightbox {
+      display: none;
+    }
+    .navbar-default{
+      background-color: rgb(34,34,34) !important;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #09C !important;
+      font-size:1.9vw;
+    }
+    #navbar{
+      margin-left: 8vw;
+    }
+
+    .sideBarLeft{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+    }
+    #sideBarText{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+
+    }
+    .container-fluid{
+      margin-top: 80px;
+    }
+
+    .contentIndex p{
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+    }
+    p{
+      color: white;
+    }
+    h1{
+      color: #09C !important;
+    }
+    body{
+      background-color: #2B2B2B;
+    }
+    @media screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:1.5vw;
+      }
+
+    }
+    @media screen and (max-device-width : 767px){
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:3vw;
+      }
+
+    }
+  </style>
+</head>
+<body onload="createSlideArray();addNewsLetterText();addSongTitle();">
+	<script src="slideshow.js"></script>
+	<script src="SiteBar.js"></script>
+  <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Project name</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="active" href="indexnew.html">Home</a></li>
+            <li><a href="band.html">Band</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="live.html">Live</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header"></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="foto.html">Fotos</a></li>
+              </ul>
+            </li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="presse.html">Presse</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px"></i></a></li>
+            <li><a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:red"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- Main Container -->
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 sideBarLeft">
+        <a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px; color:white; font-size: 2.5em;margin:0.5vw;"></i></a>
+        <a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:white; font-size: 2.5em; margin:0.5vw;"></i></a>
+        <br>
+        <br>
+        <h4>Floyd Division Newsletter</h4>
+        <p>Sende ein Mail mit e-mail Adresse an:</p>
+        <a href="mailto:newsletter@floyddivision.at?subject=feedback" >newsletter@floyddivision.at</a>
+        <br>
+        <br>
+        <h4>ANDREAS PUTZ</h4>
+        <p>Audio Engineering</p>
+        <a href="http://www.andreas-putz.com" >www.andreas-putz.com</a>
+        <br>
+        <br>
+        <a href="http://www.codefactory.wien" "email me"><img src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/12/codefactory-vienna-1.png"></a>
+
+
+        </div>
+      	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+					<ul class="bxslider" id="slideshowContainer">
+
+          </ul>
+      		<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+      <p>Promotionmappe & Pressetext</p>
+      <p>auf Anfrage: <a href="kontakt@floyddivision.at">kontakt@floyddivision.at</a></p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1>Pressefotos</h1>
+
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <img class="img-responsive" src="img/FloydDivision_Pressefoto_3_k.jpg">
+          <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_3_RGB.jpg">download High Res</a></p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <img class="img-responsive" src="img/FloydDivision_Pressefoto_4_k.jpg">
+          <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_4_RGB.jpg">download High Res</a></p>
+        </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-responsive" src="img/FloydDivision_Pressefoto_1_k.jpg">
+        <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_1_RGB.jpg">download High Res</a></p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+        <img class="img-responsive" src="img/FloydDivision_Pressefoto_2_2_k.jpg">
+        <p>-><a href="http://www.floyddivision.at/Files/FloydDivision_Pressefoto_2_2.JPG">download High Res</a></p>
+      </div>
+      </div>
+
+
+
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h1>Pressestimmen</h1>
+
+	<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <p>
+      .....2009 gegründet, gilt die Wiener Truppe als eine der arriviertesten Tribute-Bands Euopas. "Eine Reise durch endlose Klanglandschaften von Pink Floyd, ein Sound, der näher am Original nicht sein könnte", jubelt die Passauer Neue Presse. .......
+      </p>
+      <p>Quelle:<a href="http://www.floyddivision.at/Files/2017_SimmCity.jpg">Österreich</a></p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+      <p>
+      ....Coverband lässt Neuberinhaus beben
+      300 Fans haben sich in Reichenbach von der unsterblichen Rockmusik der 1970er und 1980er Jahre sowie einer Licht- und Multimedia-Show verzaubern lassen. Ein Besucher: Ich war überrascht, hier soetwas zu erleben. …….
+      </p>
+      <p>Quelle: <a href="http://www.floyddivision.at/Files/Freie_Presse.pdf">Freie Presse</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>
+        ……Coverbands der Stones oder von AC/DC stehen vor einem Problem: Das einzigartige Charisma der Stars auf die Bühne zu bringen, ohne ins peinliche Kopieren zu verfallen, ist eine Herausforderung. Nicht so, würde man meinen, bei Pink Floyd: Die Ausnahmeband hat live vor allem mit groß angelegter Show und weniger mit Präsenz der Musiker gepunktet. Und sollte daher besser geeignet sein für eine Tribute-Show. Dass das nicht stimmt, zeigen viele internationale Tribute-Beispiele, die zwar perfekt Sound und Optik kopieren, aber auch den heftigsten Fan kalt lassen.
+  In Wien aber gibt es die elfköpfige Floyd Division. Und die fügen einer musikalisch und optisch hervorragenden Umsetzung des Liveerlebnisses (runde Leinwand, Videoprojektion und mehr) noch etwas Entscheidendes bei: Spürbaren Enthusiasmus nämlich, der ihre Tribute-Shows besonders macht. Am 4. Februar in der SIMM City gibt es eine "Psychedelic Journey" durch die Geschichte Pink Floyds…….
+      </p>
+      <p>Quelle: <a href="https://kurier.at/gewinnspiele/ein-gruebler-elf-floyd-fans/239.442.641">Kurier</a></p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Alle "Floyd Division"-Musiker sorgten mit ihrem exzellenten Können dafür, dass für circa drei Stunden der urtypische Pink-Floyd-Sound durch die Kufa wehte. Mit Titeln wie "Brain damaged" stellte "Floyd Division" das im Jahr 1973 weltweit am stärksten verkaufte Album "The dark side of the moon" in den Mittelpunkt. Die Menschen im Saal wippten mit den Füßen und Textsichere sangen leise mit. Ein Höhepunkt des Abends war "Dogs" vom 1977er-Album "Animals"..."
+      </p>
+      <p>Quelle: Lausitzer Rundschau</p>
+    </div>
+    </div>
+    <div class="row">
+	<div class="col-lg-6">
+      <p>
+        ……Coverbands der Stones oder von AC/DC stehen vor einem Problem: Das einzigartige Charisma der Stars auf die Bühne zu bringen, ohne ins peinliche Kopieren zu verfallen, ist eine Herausforderung. Nicht so, würde man meinen, bei Pink Floyd: Die Ausnahmeband hat live vor allem mit groß angelegter Show und weniger mit Präsenz der Musiker gepunktet. Und sollte daher besser geeignet sein für eine Tribute-Show. Dass das nicht stimmt, zeigen viele internationale Tribute-Beispiele, die zwar perfekt Sound und Optik kopieren, aber auch den heftigsten Fan kalt lassen.
+  In Wien aber gibt es die elfköpfige Floyd Division. Und die fügen einer musikalisch und optisch hervorragenden Umsetzung des Liveerlebnisses (runde Leinwand, Videoprojektion und mehr) noch etwas Entscheidendes bei: Spürbaren Enthusiasmus nämlich, der ihre Tribute-Shows besonders macht. Am 4. Februar in der SIMM City gibt es eine "Psychedelic Journey" durch die Geschichte Pink Floyds…….
+      </p>
+      <p>Quelle: <a href="https://kurier.at/gewinnspiele/ein-gruebler-elf-floyd-fans/239.442.641">Kurier</a></p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Pink Floyd ist Pop History! Deshalb kommen Freitag bei der Krone Konzertreihe im Eboardmuseum Klagenfurt auch die Gruppe "Floyd Division auf die Bühne. Eboard Chef Gert Prix: Die österreichische Gruppe ist selbst schon beinahe Kult. Sie hat schon so viele Fans bei uns, dass wir sie nochmal einladen mussten..."
+      </p>
+      <p>Quelle: Kronen Zeitung Klagenfurt</p>
+    </div>
+    </div>
+    <div class="row">
+	<div class="col-lg-6">
+      <p>
+        "Es gibt Coverbands und Tributebands. Es gibt gute, sehr gute und schlechte. Pink Floyd stellen dafür ein bevorzugtes Objekt des Tributes dar. Es gibt Bands die beschränken sich dabei auf hochwertige Musik mit tollem Licht, andere machen eine bombastische Show, kaufen sich einen bekannten Sänger ein und kriegen musikalisch doch nix auf die Reihe..... Das es viel besser geht, beweisen Floyd Division aus Österreich.....Nach der "Australian Pink Floyd Show" und "Britfloyd", steht die Band qualitativ ganz weit oben in Europa"
+      </p>
+      <p>Quelle: access2music</p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Die grandiose österreichische Tribute-Band "Floyd Division" war zu Gast in der Spinnerei zu Traun, um ihren Heroen Pink Floyd zu huldigen. Das äußerst zahlreich erschienene Publikum war fasziniert von der hochwertigen Darbietung, die so nah und detailverliebt wie möglich am Original war."
+      </p>
+      <p>Quelle: <a href="http://www.traunimbild.at/events/view/981/page:1">Traun Im Bild</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>
+        "Die Pink Floyd Tribute Band Floyd Division mit Sänger Roman Bischof tourte gerade noch durch Deutschland. Die heimischen Fans.... waren jetzt im Pottschacher Kulturhaus am Zug. Veranstalter Harry Brawenec und die fast 300 Besucher fanden das Konzert unisono genial.
+      </p>
+      <p>Quelle: <a href="img/PottschachKritik.jpg"> Bezirksblätter Nö</a></p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Pink Floyd – Eine Legende wird zelebriert.....Etwa 1200 Besucher erlebten am Freitagabend eine von Floyd Division perfekt inszenierte Multimediashow mit den Songs der britischen Rockband auf der Seebühne Kriebstein.....Das Publikum saugt die in solider Handarbeit in brillantem Sound abgelieferten Stücke dankbar auf"
+      </p>
+      <p>Quelle: <a href="img/KriebsteinKritik.jpg">Freie Presse Sachsen</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>
+        "Floyd Division sind ja so nah dran an Floyd, unglaublich. Es gab wirklich viele Momente, wo man glauben konnte, die Originale spielen da auf der Bühne. .... Die Stimme ist für mich auch die, die unter den Floyd-Coverbands am dichtesten am Original dran ist. Auch die beiden Damen im Hintergrund tragen nicht unwesentlich zum Floyd-Sound bei, machen dann bei "The great Gig in the Sky" ihr Meisterstück!.....Ja, und die beiden Gitarristen spielen wirklich wie Gilmour himself! Einfach nur genial!"
+      </p>
+      <p>Quelle: <a href="http://www.bruder-franziskus.de/">Bruder Franziskus - Pink Floyd Fanbase</a></p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Gut 230 Besucher strömten letzten Samstag aus dem gesamten Bundesland nach Frauental....Perfektes Wetter und angenehme Temperaturen waren zudem gute Begleiter für eine psychodelische Zeitreise rund um die Hits der Kultgruppe Pink Floyd.......mit "Shine on your crazy diamonds" den Abend für eine Erinnerungswürdige, musikalische Zeitreise bereiteten. Perfekte Pink Floyd - Covers ausgezeichneter Musiker mit Sänger und Mastermind Roman Bischof trafen auf sphärische Lichttechnik und begeisterten Floyd-Fans"
+      </p>
+      <p>Quelle: <a href="http://www.floyddivision.at/Files/BluegarageKritik2.jpg">Bezirksblatt Deutschlandsberg</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>
+        "Pink Floyd hätte im Vergleich zu "Floyd Division" eine größere Bühne gebraucht, das war dann aber schon alles, was beide Bands unterscheidet. Musikalisch lieferten die Musiker einfach Pink Floyd pur ab"
+      </p>
+      <p>Quelle: <a href="http://www.bruder-franziskus.de/">Bruder Franziskus - Pink Floyd Fanbase</a></p>
+    </div>
+    <div class="col-lg-6">
+      <p>
+      "Bei Tageslicht wurde dann mit „in the flesh“ begonnen und man hat sofort gemerkt, dass das Publikum beinahe auf’s Essen vergessen hat.... Kolportierten Gerüchte zu Folge soll Ewald sogar gesagt haben „Die spielen in einer anderen Liga!"
+      </p>
+      <p>Quelle: <a href="http://www.pulse-and-spirit.com/konzerte/floyd-division-15-7-2011-traun-hauptplatz/">Pulse and Spirit</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>"Die Wiener "Floyd Division" sind eine europaweit anerkannte Tribute-Band und bemühen sich mit großem Aufwand und in größter Perfektion um originalgetreue Wiedergabe. Zeitlose Songs wie "Wish You Were Here" oder "Comfortably Numb" drehten für viele Besucher das Rad der Zeit um einige Jahrzehnte zurück und das es noch viele Floyd-Fans gibt, zeigte der sehr gut gefüllte Trauner Hauptplatz."</p>
+      <p>Quelle: <a href="http://www.traunimbild.at/events/view/700">Traun Im Bild</a></p>
+    </div>
+
+    <div class="col-lg-6">
+      <p>"Die Band schaffte es mit außergewöhnlichen handwerklichen Mitteln und der visuellen Umsetzung genau diese dichte, sphärische, emotionale Stimmung zu zelebrieren, für die das Original berühmt war. Ein Abend mit einem Genuss für sämtliche Sinne, eine Reise durch endlose Klanglandschaften von Pink Floyd, ein Sound, der näher am Original nicht sein könnte"</p>
+      <p>Quelle: <a href="/img/BluegarageKritik.jpg">Pulse and Spirit</a></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6">
+      <p>"Die Wiener "Floyd Division" sind eine europaweit anerkannte Tribute-Band und bemühen sich mit großem Aufwand und in größter Perfektion um originalgetreue Wiedergabe. Zeitlose Songs wie "Wish You Were Here" oder "Comfortably Numb" drehten für viele Besucher das Rad der Zeit um einige Jahrzehnte zurück und das es noch viele Floyd-Fans gibt, zeigte der sehr gut gefüllte Trauner Hauptplatz."</p>
+      <p>Quelle: <a href="/img/NoenReview.jpg">NÖN</a></p>
+    </div>
+        </div>
+
+    </div>
+    </div>
+
+      	</div>
+
+
+
+
+
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="sideBarText">
+          <h4>Floyd Division</h4>
+        <br>
+        <p style="color:#0099CC">Programmauszug</p>
+        <br>
+        </div>
+
+      </div> <!-- End Main Row -->
+    </div> <!-- End Main Container -->
+
+</body>
+</html>

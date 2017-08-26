@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="jquery.bxslider.css" rel="stylesheet" />
+    <script src="jquery.bxslider.min.js"></script>
+    <style>
+    .bandImg {
+      margin-top: 10%;
+      color: black;
+    }
+
+    .lightbox {
+      display: none;
+    }
+    .navbar-default{
+      background-color: rgb(34,34,34) !important;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #09C !important;
+      font-size:1.9vw;
+    }
+    #navbar{
+      margin-left: 8vw;
+    }
+
+    .sideBarLeft{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+    }
+    #sideBarText{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+
+    }
+    .container-fluid{
+      margin-top: 80px;
+    }
+
+    .contentIndex p{
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+    }
+    p {
+      color: white;
+    }
+    h3, h4{
+      color: #09C !important;
+    }
+    body{
+      background-color: #2B2B2B;
+    }
+    @media screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:1.5vw;
+      }
+
+    }
+    @media screen and (max-device-width : 767px){
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:3vw;
+      }
+
+    }
+  </style>
+
+  </head>
+  <body onload="createSlideArray();addNewsLetterText();addSongTitle();">
+    <script src="slideshow.js"></script>
+    <script src="SiteBar.js"></script>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Project name</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="active" href="indexnew.html">Home</a></li>
+            <li><a href="band.html">Band</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="live.html">Live</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header"></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="foto.html">Fotos</a></li>
+              </ul>
+            </li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="presse.html">Presse</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px"></i></a></li>
+            <li><a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:red"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <!-- Main Container -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 sideBarLeft">
+        <a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px; color:white; font-size: 2.5em;margin:0.5vw;"></i></a>
+        <a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:white; font-size: 2.5em; margin:0.5vw;"></i></a>
+        <br>
+        <br>
+        <h4>Floyd Division Newsletter</h4>
+        <p>Sende ein Mail mit e-mail Adresse an:</p>
+        <a href="mailto:newsletter@floyddivision.at?subject=feedback" >newsletter@floyddivision.at</a>
+        <br>
+        <br>
+        <h4>ANDREAS PUTZ</h4>
+        <p>Audio Engineering</p>
+        <a href="http://www.andreas-putz.com" >www.andreas-putz.com</a>
+        <br>
+        <br>
+        <a href="http://www.codefactory.wien" "email me"><img src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/12/codefactory-vienna-1.png"></a>
+
+
+        </div>
+
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+
+        <div class="row">
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center; border-bottom: 1px solid grey">
+            <ul class="bxslider" id="slideshowContainer">
+
+            </ul>
+            <h3>Floyd Division wird unterstützt von:</h3>
+    <p>Andreas Putz - <a href="http://www.andreas-putz.com/" target="_blank">www.andreas-putz.com</a></p>
+    <p>Andreas Müller - <a href="http://www.muellerphotos.com" target="_blank">www.muellerphotos.com</a></p>
+    <p>Tom Poe Fotography - <a href="http://www.tompoephotography.com" target="_blank">www.tompoephotography.com</a></p>
+    <p>Julia Antes - <a href="http://www.juliaantes.com" target="_blank">www.juliaantes.com</a></p>
+          </div>
+
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
+            <h4>Pink Floyd:</h4>
+    <p>-> Pink Floyd - <a href="http://www.pinkfloyd.com" target="_blank">www.pinkfloyd.com</a></p>
+    <p>-> David Gilmour - <a href="http://www.davidgilmour.com" target="_blank">www.davidgilmour.com</a></p>
+    <p>-> Roger Waters - <a href="http://www.rogerwaters.com" target="_blank">www.rogerwaters.com</a></p>
+    <p>-> Nick Mason - <a href="http://www.drummerworld.com/drummers/Nick_Mason.html" target="_blank">www.drummerworld.com/drummers/Nick_Mason.html</a></p>
+    <p>-> Syd Barret - <a href="http://www.sydbarrett.net" target="_blank">http://www.sydbarrett.net</a></p>
+    <p>-> Pink Floyd wikipedia: - <a href="http://de.wikipedia.org/wiki/Pink_Floyd" target="_blank">de.wikipedia.org/wiki/Pink_Floyd</a></p>
+          </div>
+          <br>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>Fanseiten:</h4>
+    <p>-> BetreutesProggen- <a href="http://www.betreutesproggen.de" target="_blank">www.betreutesproggen.de</a></p>
+    <p>-> größte deutschsprachige Floyd Fanbase - <a href="http://www.bruder-franziskus.de" target="_blank">www.bruder-franziskus.de</a></p>
+    <p>-> All Pink Floyd Fan Network - <a href="http://www.pinkfloydfan.net" target="_blank">www.pinkfloydfan.net</a></p>
+    <p>-> Pink Floyd Archiv - <a href=" http://www.pinkfloydarchives.com" target="_blank"> www.pinkfloydarchives.com</a></p>
+    <p>-> Neptune Pink Floyd - <a href="http://www.neptunepinkfloyd.co.uk" target="_blank">www.neptunepinkfloyd.co.uk</a></p>
+    <p>-> Brain Damage - <a href="http://www.brain-damage.co.uk" target="_blank">www.brain-damage.co.uk</a></p>
+    <p>-> Pink Floydz - <a href="http://www.pinkfloydz.com" target="_blank">www.pinkfloydz.com</a></p>
+    <p>-> Pink Floyd Fandom - <a href="http://www.pinkfloyd.net" target="_blank">www.pinkfloyd.net</a></p>
+    <p>-> Pink Floyd Fanartikel - <a href="http://www.musik-base.de/Bands/P/Pink-Floyd/Fanartikel" target="_blank">www.musik-base.de/Bands/P/Pink-Floyd/Fanartikel</a></p>
+    <p>-> comprehensive and interactive Fansite - <a href="http://www.pinkfloydonline.com" target="_blank">http://www.pinkfloydonline.com</a></p>
+    <p>-> private Fan Seite von Daniel Hofmann - <a href="http://daniel-hofmann.info" target="_blank">http://daniel-hofmann.info</a></p>
+    <p>-> Niederländische Fanseite - <a href="http://www.pinkfloydfans.nl/" target="_blank">http://www.pinkfloydfans.nl/</a></p>
+          </div>
+          <br>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>Musik:</h4>
+    <p>-> Progressiv Rock Enyklopedie - <a href="http://www.babyblaue-seiten.de" target="_blank">www.babyblaue-seiten.de</a></p>
+    <p>-> Progressiv Rock Archiv - <a href="http://www.progarchives.com" target="_blank">www.progarchives.com</a></p>
+    <p>-> Tribute Bands im Netz - <a href="http://www.coverbands.at" target="_blank">www.coverbands.at</a></p>
+    <p>-> Veranstaltungskalender für Wien - <a href="http://www.wien-konkret.at" target="_blank">www.wien-konkret.at</a></p>
+          </div>
+          <br>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>Fotografie / Video / Grafik:</h4>
+    <p>-> Andreas Müller - <a href="http://www.muellerphotos.com" target="_blank">www.muellerphotos.com</a></p>
+    <p>-> Tom Poe Fotography - <a href="http://www.tompoephotography.com" target="_blank">www.tompoephotography.com</a></p>
+    <p>-> Visuals & Video - <a href="http://www.leiwandstudios.at" target="_blank">www.leiwandstudios.at</a></p>
+    <p>-> Julia Antes - <a href="http://www.juliaantes.com" target="_blank">www.juliaantes.com</a></p>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>Musik- und Künstleragenturen :</h4>
+    <p>-> Ring Events - <a href="http://www.ring-events.at" target="_blank">www.ring-events.at</a></p>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>Links für Musiker:</h4>
+    <p>-> Pink Floyd Guitar Tabs - <a href="http://www.guitartabsexplorer.com" target="_blank">www.guitartabsexplorer.com</a></p>
+    <p>-> Gimourish.com - <a href="http://www.gilmourish.com" target="_blank">www.gilmourish.com</a></p>
+    <p>-> Syd Barret´s Sound - <a href="how-to-sound-like-syd-barrett" target="_blank">how-to-sound-like-syd-barrett</a></p>
+    <p>-> die Hp unseres Tontechnikers ANDREAS PUTZ - <a href="http://www.andreas-putz.com" target="_blank">www.andreas-putz.com</a></p>
+    <p>-> Gitarren Tabulaturen ohne Ende - <a href="http://www.ultimate-guitar.com" target="_blank">www.ultimate-guitar.com</a></p>
+    <p>-> Infoquelle über Musikequipment - <a href="http://www.harmony-central.com" target="_blank">www.harmony-central.com</a></p>
+    <p>-> Keyboard Sounddesign - <a href="http://www.enjoythesirens.com" target="_blank">www.enjoythesirens.com</a></p>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>befreundete Bands:</h4>
+    <p>-> Cream Revival Band - <a href="http://www.cream-revival-band.com" target="_blank">www.cream-revival-band.com</a></p>
+    <p>-> Cryfree - <a href="http://www.cryfree.hu" target="_blank">www.cryfree.hu</a></p>
+    <p>-> Daria Kinzer - <a href="http://www.dariakinzer.com" target="_blank">www.dariakinzer.com</a></p>
+    <p>-> Grand Zeppelin - <a href="http://www.grandzeppelin.at" target="_blank">www.grandzeppelin.at</a></p>
+    <p>-> pensive lane - <a href="http://www.pensivelane.com" target="_blank">www.pensivelane.com</a></p>
+    <p>-> Stilettos Rock Circus - <a href="http://www.stiletto-online.at" target="_blank">www.stiletto-online.at</a></p>
+    <p>-> Tribu2 - <a href="http://www.tribu2.at" target="_blank">www.tribu2.at</a></p>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+            <h4>sonstige Links:</h4>
+    <p>-> Automatenverleih - <a href="http://www.herwig-automaten.at" target="_blank">www.herwig-automaten.at</a></p>
+    <p>-> Paradeiserkistl - Spezial Gemüsehandel - <a href="http://www.paradeiserkistl.at" target="_blank">www.paradeiserkistl.at</a></p>
+    <p>-> Geri Cuba - Gitarrenunterricht - <a href="http://www.dergitarrenlehrer.at" target="_blank">www.dergitarrenlehrer.at</a></p>
+          </div>
+
+
+        </div>
+
+
+        </div>
+
+
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="sideBarText">
+          <h4>Floyd Division</h4>
+        <br>
+        <p style="color:#0099CC">Programmauszug</p>
+        <br>
+        </div>
+
+
+
+
+      </div> <!-- End Main Row -->
+    </div> <!-- End Main Container -->
+
+  </body>
+</html>
