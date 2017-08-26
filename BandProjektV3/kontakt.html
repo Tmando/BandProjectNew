@@ -9,23 +9,145 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .bandImg {
+      margin-top: 10%;
+      color: black;
+    }
+
+    .lightbox {
+      display: none;
+    }
+    .navbar-default{
+      background-color: rgb(34,34,34) !important;
+    }
+    .navbar-default .navbar-nav>li>a {
+      color: #09C !important;
+      font-size:1.9vw;
+    }
+    #navbar{
+      margin-left: 8vw;
+    }
+    
+    .sideBarLeft{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+    }
+    #sideBarText{
+      text-align: center;
+      color: white;
+      background-color: rgb(34,34,34);
+      padding: 1vh;
+
+       
+    }
+    .container-fluid{
+      margin-top: 80px;
+    }
+    
+    .contentIndex p{
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+    }
+    p{
+      color: white;
+    }
+    h1{
+      color:  #09C !important;
+    }
+    body{
+      background-color: #2B2B2B;
+    }
+    @media screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:1.5vw;
+      }
+
+    }
+    @media screen and (max-device-width : 767px){
+      .navbar-default .navbar-nav>li>a {
+        color: #09C !important;
+        font-size:3vw;
+      }
+
+    }
+  </style>
 </head>
 <body onload="addNewsLetterText();addSongTitle();">
     <script src="SiteBar.js"></script>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a class="navbar-brand" href="#">Project name</a>-->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a class="active" href="indexnew.html">Home</a></li>
+            <li><a href="band.html">Band</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="live.html">Live</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Media <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header"></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="foto.html">Fotos</a></li>
+              </ul>
+            </li>
+            <li><a href="links.html">Links</a></li>
+            <li><a href="presse.html">Presse</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px"></i></a></li>
+            <li><a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:red"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
     <!-- Main Container -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 sideBarLeft">
+        <a href="https://www.facebook.com/floyddivision"><i class="fa fa-facebook-official" style="font-size:24px; color:white; font-size: 2.5em;margin:0.5vw;"></i></a> 
+        <a href="https://www.youtube.com/user/viennafloyd"><i class="fa fa-youtube" style="font-size:24px; color:white; font-size: 2.5em; margin:0.5vw;"></i></a>
+        <br>
+        <br>
+        <h4>Floyd Division Newsletter</h4>
+        <p>Sende ein Mail mit e-mail Adresse an:</p>
+        <a href="mailto:newsletter@floyddivision.at?subject=feedback" >newsletter@floyddivision.at</a>
+        <br>
+        <br>
+        <h4>ANDREAS PUTZ</h4>
+        <p>Audio Engineering</p>
+        <a href="http://www.andreas-putz.com" >www.andreas-putz.com</a>
+        <br>
+        <br>
+        <a href="http://www.codefactory.wien" "email me"><img src="https://www.codefactory.wien/www/test/wp-content/uploads/2016/12/codefactory-vienna-1.png"></a>
+
+
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <h1>Floyd Division Newsletter</h1>
       <p>Sende ein Mail mit e-mail Adresse an:</p>
       <p><a href="newsletter@floyddivision.at">newsletter@floyddivision.at</a></p>
-      <h1>Kontakt, Booking</h1>
+      <h1 style="margin-top: 50px">Kontakt, Booking</h1>
       <p>Roman Bischof</p>
       <p>Tel: 0680/312 59 20, kontakt@floyddivision.at</p>
       <p>Booking Partner: Ring Events - <a href="http://www.ring-events.at">www.ring-events.at</a></p>
-      <h1>Technical Info</h1>
+      <h1 style="margin-top: 50px">Technical Info</h1>
       <p>Andreas Putz</p>
       <p>Tel: 0676/90 40 020</p>
       <p><a href="http://www.andreas-putz.com">www.andreas-putz.com</a></p>
@@ -33,7 +155,10 @@
 
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id="sideBarText">
-
+        <h4>Floyd Division</h4>
+        <br>
+        <p style="color:#0099CC">Programmauszug</p>
+        <br>
         </div>
 
 

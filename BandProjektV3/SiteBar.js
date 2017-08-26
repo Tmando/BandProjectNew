@@ -74,7 +74,7 @@ var songTitle = [{
 
 function addNewsLetterText(){
   console.log("hallo");
-  document.getElementById('sideBarText').innerHTML += "<h4>" + newsLetter[0].title + "</h4>";
+  /*document.getElementById('sideBarText').innerHTML += "<h4>" + newsLetter[0].title + "</h4>";
   document.getElementById('sideBarText').innerHTML += "<p>" + newsLetter[0].text + "</p>";
   document.getElementById('sideBarText').innerHTML += "<p>" + "<a href=\""+ newsLetter[0].email + "\">" + newsLetter[0].email + "</a>" + "</p>";
   document.getElementById('sideBarText').innerHTML += "<h4>"+ audio[0].title +"</h4>";
@@ -82,7 +82,7 @@ function addNewsLetterText(){
   document.getElementById('sideBarText').innerHTML += "<p>"+ "<a href=\""+ audio[0].link + "\">" + audio[0].link + "</a>" + "</p>";
   document.getElementById('sideBarText').innerHTML += "<p>"+ programmAuszugTitle[0].titleBand + "</p>";
   document.getElementById('sideBarText').innerHTML += "<p>"+ programmAuszugTitle[0].title + "</p>";
-}
+*/}
 function addSongTitle(){
   for(let i=0;i<songTitle.length;i++){
     document.getElementById('sideBarText').innerHTML += "<p class=\"songTitleStyle\">"+ songTitle[i].title + "</p>";
