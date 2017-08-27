@@ -73,7 +73,7 @@ function appendBandPictures() {
     }
     tag += "<div class=\"col-lg-3 col-md-3 col-sm-3 col-xs-3 bandImg\">";
     tag += "<div class=\"row\">";
-      tag += "<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\">";
+      tag += "<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\" style=\"color: white\">";
       tag += bandMembers[i].name;
       tag += "</div>";
     tag += "</div>";
